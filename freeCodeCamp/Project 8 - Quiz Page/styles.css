@@ -10,6 +10,10 @@ body {
     height: 50px;
     background-color: #1b1b32;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
   }
   
   #logo {
@@ -35,6 +39,25 @@ body {
     justify-content: space-evenly;
   }
   
+  nav > ul > li{
+    color: #dfdfe2;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+  }
+
+  nav > ul > li:hover{
+    text-decoration: none;
+    color: #1b1b32;
+    background-color: #dfdfe2;
+    cursor: pointer;
+  }
+
+  li > a{
+    color: #dfdfe2;
+    text-decoration: none;
+  }
+
   h1,
   h2 {
     font-family: Verdana, Tahoma;
@@ -42,6 +65,10 @@ body {
   
   h2 {
     border-bottom: 4px solid #dfdfe2;
+  }
+
+  p::before{
+    content: "Question #";
   }
 
   .sr-only{
