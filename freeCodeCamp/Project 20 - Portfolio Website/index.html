@@ -181,9 +181,15 @@
   </footer>
 
   <script>
-    ["#project-01", "#project-02", "#project-03", "#project-04"].forEach((selector) => {
-      document.querySelector(selector).addEventListener('click', () => window.open(
-        'https://github.com/Ros-Salazar', '_blank'))
-    });
-  </script>
+    const projects = {
+        '#project-01': 'https://ros-salazar.github.io/SurveyForm/',
+        '#project-02': 'https://ros-salazar.github.io/TributePage/',
+        '#project-03': 'https://ros-salazar.github.io/TechnicalDocumentationPage/',
+        '#project-04': 'https://ros-salazar.github.io/ProductLandingPage/#',
+    };
+
+    for (const [selector, url] of Object.entries(projects)) {
+        document.querySelector(selector).addEventListener('click', () => window.open(url, '_blank'));
+    }
+</script>
 </body>
